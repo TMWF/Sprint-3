@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var counterLabel: UILabel!
-    @IBOutlet weak var counterButton: UIButton!
+    @IBOutlet private weak var counterLabel: UILabel!
+    @IBOutlet private weak var counterButton: UIButton!
     private var counter = 0 {
         didSet {
             counterLabel.text = "Значение счетчика: \(counter)"
@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         counterButton.layer.cornerRadius = 20
-        counterLabel.text = "Значение счетчика: \(counter)"
+        counter = 0
     }
 
 
